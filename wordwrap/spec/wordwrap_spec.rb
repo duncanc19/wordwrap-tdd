@@ -18,10 +18,6 @@ describe "wordwrap" do
     end
   end
 
-  ## NB: The following test is implemented three times to compare different methods.
-  
-  
-
   two_words_string = [
     ["hello world", 5, "hello\nworld"],
     ["hello hello", 5, "hello\nhello"],
