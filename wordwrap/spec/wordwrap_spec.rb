@@ -35,6 +35,7 @@ describe "wordwrap" do
   end 
   
   string_shorter_than_length = [
+    ["hello", 7, "hello"],
     ["hi you", 8, "hi you"],
     ["hello world", 12, "hello world"]
   ]
