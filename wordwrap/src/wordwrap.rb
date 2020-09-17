@@ -4,7 +4,12 @@ class WordWrap
     if string_to_wrap.length <= line_length
       string_to_wrap
     else
-      string_to_wrap.gsub(" ", "\n")      
+      i = line_length
+      while string_to_wrap[i] != " "
+       i -= 1
+      end 
+      string_to_wrap[i] = "\n" 
+      string_to_wrap   
     end
   end
 

@@ -46,4 +46,16 @@ describe "wordwrap" do
     end
   end
 
+  string_with_multiple_words_shorter_than_length = [
+    ["Hi I'm Bob", 7, "Hi I'm\nBob"],
+    ["Hello, my name is Bob", 12, "Hello, my\nname is Bob"],
+    ["I am a cat and I live in Bali", 19, "I am a cat and I\nlive in Bali"]
+  ]
+
+  string_with_multiple_words_shorter_than_length.each do |string_to_wrap, line_length, expected_output|
+    it "wraps string after several words" do
+      expect(WordWrap.new.wrap(string_to_wrap, line_length)).to eq(expected_output)
+    end
+  end
+
 end
