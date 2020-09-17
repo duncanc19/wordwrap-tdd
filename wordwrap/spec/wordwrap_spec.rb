@@ -71,7 +71,8 @@ describe "wordwrap" do
 
   string_to_wrap_several_times = [
     ["I am a big cat and I like to eat food", 7, "I am a\nbig cat\nand I\nlike to\neat\nfood"],
-    ["I A B E F A E", 3, "I A\nB E\nF A\nE"]
+    ["I A B E F A E", 3, "I A\nB E\nF A\nE"],
+    ["I like to eat cakes every day of the week", 9, "I like to\neat cakes\nevery day\nof the\nweek"]
   ]
 
   string_to_wrap_several_times.each do |string_to_wrap, line_length, expected_output|

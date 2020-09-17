@@ -4,8 +4,7 @@ class WordWrap
     if string_to_wrap.length <= line_length
       string_to_wrap
     else
-      i = line_length
-      wrapped_string = wrap_once(string_to_wrap, i)
+      wrapped_string = wrap_once(string_to_wrap, line_length)
       next_wrap = find_next_wrap(wrapped_string, line_length)
 
       while next_wrap
