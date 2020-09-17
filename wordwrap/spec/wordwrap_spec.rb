@@ -70,8 +70,13 @@ describe "wordwrap" do
   end
 
   string_to_wrap_several_times = [
-    ["I am a big cat and I like to eat food", 6, "I am\na big\ncat"],
-    ["I need to wrap twice", 9, "I need\nto wrap\ntwice"]
+    ["I am a big cat and I like to eat food", 7, "I am a\nbig cat\nand I\nlike to\neat\nfood"],
+    ["I A B E F A E", 3, "I A\nB E\nF A\nE"]
   ]
 
+  string_to_wrap_several_times.each do |string_to_wrap, line_length, expected_output|
+    it "wraps string several times" do
+      expect(WordWrap.new.wrap(string_to_wrap, line_length)).to eq(expected_output)
+    end
+  end
 end
