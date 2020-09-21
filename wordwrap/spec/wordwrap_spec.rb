@@ -9,7 +9,8 @@ describe "wordwrap" do
   same_length_string = {
       "hello" => "hello",
       "oryeh" => "oryeh",
-      "coffee" => "coffee"
+      "coffee" => "coffee",
+      "are" => "are"
     } 
   
   same_length_string.each do |string, output|
